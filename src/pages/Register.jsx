@@ -50,17 +50,22 @@ export default function Register() {
     function regAcc(e) {
         e.preventDefault()
 
-        signup(email, pass)
-            .then(() => {
+        if (pass === confirmPass) {
+            signup(email, pass)
+                .then(() => {
 
-            }).catch((err) => {
-                setErrMsg(err.code)
-            });
+                }).catch((err) => {
+                    setErrMsg(err.code)
+                });
+        } else {
+            return setErrMsg('Passwords dont match')
+        }
+
     }
 
     return (
         <div className='w-full h-screen flex justify-center items-center'>
-            <div className='w-[400px] h-fit border border-zinc-100 rounded-lg shadow-lg'>
+            <div className='w-[400px] h-fit bg-white/90 rounded-lg shadow-lg'>
                 <Form
                     formSubmit={regAcc}
                     formData={registerData}

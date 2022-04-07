@@ -8,7 +8,7 @@ export default function Account() {
 
     function signout(e) {
         e.preventDefault()
-        alert('logout?')
+        
     }
     return (
         <div className='h-36 w-full flex flex-col p-3 justify-between'>

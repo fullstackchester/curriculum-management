@@ -45,7 +45,7 @@ export default function Login() {
     return (
         <div className='w-full h-screen flex justify-center items-center'>
             <div
-                className='w-[400px] h-fit border border-zinc-100 shadow-lg rounded-lg'>
+                className='w-[400px] h-fit shadow-lg rounded-lg bg-white'>
                 <Form
                     formData={loginData}
                     formSubmit={loginAdmin}
